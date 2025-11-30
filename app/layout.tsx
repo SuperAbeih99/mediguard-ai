@@ -16,7 +16,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "MediGuard AI",
-  description: "AI-powered hospital bill analyzer and negotiator.",
 };
 
 export default function RootLayout({

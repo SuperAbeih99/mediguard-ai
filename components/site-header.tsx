@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./ui/button";
@@ -19,7 +20,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200/60 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="text-lg font-semibold text-slate-900">
+        <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-slate-900">
+          <Image
+            src="/MediGuard-Ai-Logo.png"
+            alt="MediGuard AI logo"
+            width={32}
+            height={32}
+            className="h-8 w-8 rounded-xl"
+            priority
+          />
           MediGuard <span className="text-blue-600">AI</span>
         </Link>
 

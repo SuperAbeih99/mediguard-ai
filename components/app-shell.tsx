@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, type SVGProps } from "react";
@@ -134,7 +135,15 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     <div className="font-sans bg-gradient-to-br from-slate-50 to-white text-slate-900">
       <div className="flex min-h-screen">
         <aside className="hidden w-72 flex-col border-r border-slate-200/80 bg-white/90 px-6 py-8 backdrop-blur lg:flex">
-          <Link href="/" className="text-xl font-semibold text-slate-900">
+          <Link href="/" className="flex items-center gap-2 text-xl font-semibold text-slate-900">
+            <Image
+              src="/MediGuard-Ai-Logo.png"
+              alt="MediGuard AI logo"
+              width={36}
+              height={36}
+              className="h-9 w-9 rounded-xl"
+              priority
+            />
             MediGuard <span className="text-blue-600">AI</span>
           </Link>
           <p className="mt-1 text-xs text-slate-500">
@@ -171,7 +180,15 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </aside>
 
         <div className="sticky top-0 z-20 flex items-center justify-between border-b border-slate-200 bg-white/90 px-4 py-3 backdrop-blur lg:hidden">
-          <Link href="/" className="text-base font-semibold">
+          <Link href="/" className="flex items-center gap-2 text-base font-semibold">
+            <Image
+              src="/MediGuard-Ai-Logo.png"
+              alt="MediGuard AI logo"
+              width={28}
+              height={28}
+              className="h-7 w-7 rounded-xl"
+              priority
+            />
             MediGuard <span className="text-blue-600">AI</span>
           </Link>
           <button
