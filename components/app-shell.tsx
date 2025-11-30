@@ -129,7 +129,7 @@ function NavigationList({
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { user, isGuest, displayName, signOut } = useAuth();
+  const { isGuest, displayName, signOut } = useAuth();
 
   return (
     <div className="font-sans bg-gradient-to-br from-slate-50 to-white text-slate-900">
@@ -268,15 +268,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <div>
                 <p className="text-sm font-semibold text-slate-500">Workspace</p>
                 <p className="text-base font-semibold text-slate-900">
-                  {user?.name ?? "Guest session"}
+                  {displayName}
                 </p>
               </div>
               <div className="flex gap-2">
-                {isGuest ? (
-                  <Button size="sm" variant="secondary" onClick={signInDemo}>
-                    Sign in
-                  </Button>
-                ) : (
+                {!isGuest && (
                   <Button size="sm" variant="ghost" onClick={signOut}>
                     Sign out
                   </Button>
