@@ -10,6 +10,14 @@ Upload a bill (image or PDF) or paste the text, and the app uses AI to:
 
 ---
 
+## Live App
+
+The app is live at:
+
+👉 **https://mediguardai.vercel.app/**
+
+---
+
 ## Features
 
 - 🧾 **Bill input options**
