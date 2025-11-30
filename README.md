@@ -50,4 +50,27 @@ Upload a bill (image or PDF) or paste the text, and the app uses AI to:
 ```bash
 git clone git@github.com:SuperAbeih99/mediguard-ai.git
 cd mediguard-ai
+```
+### 2. Install dependencies
+```
+npm install
+# or
+yarn
+# or
+pnpm install
+```
+### 3. Environment variables
+```
+touch .env.local
+Add your keys:
+OPENAI_API_KEY=sk-...
+NEXT_PUBLIC_SUPABASE_URL=...
+NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+```
+### Run the dev server
+```
+npm run dev
+```
+
+
 
